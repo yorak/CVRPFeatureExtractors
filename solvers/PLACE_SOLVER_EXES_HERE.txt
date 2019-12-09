@@ -1,0 +1,9 @@
+SYMPHONY (custom) : vrp.exe
+	get it here: https://github.com/yorak/SYMPHONY
+	and copy vrp.exe to this (solvers) folder.
+	
+VRPH (custom) : vrp_init.exe
+	get it here: https://github.com/yorak/VRPH/tree/local_search_stats
+	and copy vrp_init to this (solvers) folder.
+	(NOTE: you have to use that specific branch)
+
