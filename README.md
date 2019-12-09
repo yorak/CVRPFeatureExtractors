@@ -1,9 +1,13 @@
 # CVRPFeatureExtractors
 A large collection of implemented feature extractors for capacitated vehicle routing problems
 
+![Kiku](results/clusters.ping)
+
+_A set of classical CVRP instances clustered using the computed features_
+
 # Usage
 
-Configure and run `main.py` using Python 2.7 and with all of the dependencies installed.
+[Configure](https://github.com/yorak/CVRPFeatureExtractors#configuring) and run `main.py` using Python 2.7 and with [all of the other dependencies installed](https://github.com/yorak/CVRPFeatureExtractors#dependencies).
 
 # Input and Output
 
@@ -23,10 +27,13 @@ Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)
 * scipy - for convenient distance matrix calculation and statistics
 * networkx - for calculating digraph nearest neighbor features
 * matplotlib and PIL (OPTIONAL) - for plotting clusters (analyze_clusters.py only)
-* VRPH (init routine)
+* [custom VRPH](https://github.com/yorak/VRPH/tree/local_search_stats) init executable - used for local search probing
+* SYMPHONY branch-and-cut solver - used for MIP probing
+* [custom ACOTSP](https://github.com/juherask/ACOTSP) TSP solver - has an option to disable ant system, used to solve TSPs fast and accurately in estimation of constraint tightness
 
 # TODO
 
 * Add support for XML CVRP instances (use helpers.cvrp_rkm16_io/read_TSPLIB_CVRP() as a template)
 * Add a command line user interface to main.py, e.g., by using argparse
-* Write unittests to verify correct operation of the extractors  
+* Try to find the ACOTSP from the `solvers` folder before resorting to hard coded path for the exe
+* Write unit tests to verify correct operation of the extractors  
