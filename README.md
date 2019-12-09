@@ -1,7 +1,7 @@
 # CVRPFeatureExtractors
 A large collection of implemented feature extractors for capacitated vehicle routing problems
 
-![Kiku](results/clusters.ping)
+![Clusters](results/clusters.png)
 
 _A set of classical CVRP instances clustered using the computed features_
 
