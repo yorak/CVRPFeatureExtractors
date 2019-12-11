@@ -15,9 +15,10 @@ Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)
 
 # Configuring
 
-* Change the folders path in `main.py/main()` to point to the actual folders the `.vrp` files reside in
+* Set the PYTHONPATH to point to the `CVRPFeatureExtractors` folder
 * Change the `ACOTSP_EXE_PATH` in `tsp_solver.py` to point to the ACOTSP executable
 * Compile the VRPH binaries and SYMPHONY binaries and place them into `solvers`folder
+* Change the folders path in `main.py/main()` to point to the actual folders the `.vrp` files reside in
 
 # Dependencies
 
