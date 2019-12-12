@@ -41,4 +41,4 @@ Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)
 
 # Citing 
 
-Rasku, J., Kärkkäinen, T., and Musliu, N. (2016). *Feature extractors for describing vehicle routing problem instances.* In OASIcs, SCOR'16, volume 50. Dagstuhl Publishing.
+Rasku, J., Kärkkäinen, T., Musliu, N.: *Feature extractors for describing vehicle routing problem instances*. In: SCOR'16, OASICS, vol. 50, pp. 7:1–7:13. Dagstuhl Publishing (2016)
