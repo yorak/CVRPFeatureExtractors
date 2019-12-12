@@ -32,6 +32,7 @@ Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)
 It is recommended to use Anaconda Python distribution, Spyder IDE, and a virtual environment to manage the dependencies. The environment with also the IDE and other tools (i.e., with the anaconda package) can be initialized with a following command:
 
 ```console
+$ cd /whatever/is/the/folder/where/you/cloned/CVRPFeatureExtractors
 $ conda create --name featureextraction python=2.7 anaconda numpy scipy networkx scikit-learn
 $ conda activate featureextraction
 $ spyder
