@@ -3,7 +3,7 @@ A large collection of implemented feature extractors for capacitated vehicle rou
 
 ![Clusters](results/clusters.png)
 
-_A set of classical CVRP instances clustered using the computed features_
+_A set of classical CVRP instances clustered using the computed features (Rasku et al. 2016)_
 
 # Usage
 
@@ -38,3 +38,7 @@ Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)
 * Add a command line user interface to main.py, e.g., by using argparse
 * Try to find the ACOTSP from the `solvers` folder before resorting to hard coded path for the exe
 * Write unit tests to verify correct operation of the extractors  
+
+# Citing 
+
+Rasku, J., Kärkkäinen, T., and Musliu, N. (2016). *Feature extractors for describing vehicle routing problem instances.* In OASIcs, SCOR'16, volume 50. Dagstuhl Publishing.
