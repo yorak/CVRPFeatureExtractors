@@ -29,7 +29,7 @@ Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)
 * networkx - for calculating digraph nearest neighbor features
 * matplotlib and PIL (OPTIONAL) - for plotting clusters (analyze_clusters.py only)
 
-It is recommended to use Anaconda Python distribution, Spyder IDE, and a virtual environment to manage the dependencies. The environment with also the IDE and other tools (i.e., with the anaconda package) can be initialized with a following command:
+It is recommended to use Anaconda Python distribution, Spyder IDE, and a virtual environment to manage the dependencies. The environment with also the IDE and other tools (i.e., with the anaconda package) can be initialized and activated with following commands:
 
 ```console
 $ cd /whatever/is/the/folder/where/you/cloned/CVRPFeatureExtractors
