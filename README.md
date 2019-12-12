@@ -28,15 +28,25 @@ Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)
 * scipy - for convenient distance matrix calculation and statistics
 * networkx - for calculating digraph nearest neighbor features
 * matplotlib and PIL (OPTIONAL) - for plotting clusters (analyze_clusters.py only)
+
+It is recommended to use Anaconda Python distribution, Spyder IDE, and a virtual environment to manage the dependencies. The environment with also the IDE and other tools (i.e., with the anaconda package) can be initialized with a following command:
+
+```console
+$ conda create --name featureextraction python=2.7 anaconda numpy scipy networkx scikit-learn
+$ conda activate featureextraction
+$ spyder
+```
+In addition, you need to compile some external executables, e.g., preferably with GCC, and place them to the `solvers` folder:
+
 * [custom VRPH](https://github.com/yorak/VRPH/tree/local_search_stats) init executable - used for local search probing
-* SYMPHONY branch-and-cut solver - used for MIP probing
-* [custom ACOTSP](https://github.com/juherask/ACOTSP) TSP solver - has an option to disable ant system, used to solve TSPs fast and accurately in estimation of constraint tightness
+* [SYMPHONY](https://projects.coin-or.org/SYMPHONY) branch-and-cut solver - used in the MIP probing
+* [custom ACOTSP](https://github.com/juherask/ACOTSP) TSP solver - which has an option to disable ant system, it is used to solve TSPs fast and accurately when estimating the tightness of the constraints
 
 # TODO
 
 * Add support for XML CVRP instances (use helpers.cvrp_rkm16_io/read_TSPLIB_CVRP() as a template)
 * Add a command line user interface to main.py, e.g., by using argparse
-* Try to find the ACOTSP from the `solvers` folder before resorting to hard coded path for the exe
+* Try to find the ACOTSP from the `solvers` folder before resorting to hard coded `ACOTSP_EXE_PATH` for the exe
 * Write unit tests to verify correct operation of the extractors  
 
 # Citing 
