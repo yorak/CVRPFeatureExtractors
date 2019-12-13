@@ -3,7 +3,8 @@ A large collection of implemented feature extractors for capacitated vehicle rou
 
 ![Clusters](results/clusters.png)
 
-_A set of classical CVRP instances clustered using the computed features (Rasku et al. 2016)_
+_A set of classical CVRP instances clustered using the computed features (Rasku et al. 2016)_<br>
+_for a zoomable visualization, see http://users.jyu.fi/~juherask/features/_
 
 # Usage
 
