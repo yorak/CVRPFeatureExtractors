@@ -1,5 +1,5 @@
 # CVRPFeatureExtractors
-A large collection of implemented feature extractors for capacitated vehicle routing problems
+A large collection of implemented feature extractors for capacitated vehicle routing problems. Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/) `.vrp` files and outputs `.csv`files with more than 400 columns (features), where each line thoroughly descibes a single CVRP instance.
 
 ![Clusters](results/clusters.png)
 
@@ -8,10 +8,6 @@ _A set of classical CVRP instances clustered using the computed features (Rasku 
 # Usage
 
 [Configure](https://github.com/yorak/CVRPFeatureExtractors#configuring) and run `main.py` using Python 2.7 and with [all of the other dependencies installed](https://github.com/yorak/CVRPFeatureExtractors#dependencies).
-
-# Input and Output
-
-Reads [TSPLIB formatted](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/) formatted `.vrp` files and outputs `.csv`files with around 400 columns (features), with each line describing a single CVRP instance.
 
 # Configuring
 
