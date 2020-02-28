@@ -42,10 +42,12 @@ In addition, you need to compile some external executables, e.g., preferably wit
 
 # TODO
 
-* Add support for XML CVRP instances (use helpers.cvrp_rkm16_io/read_TSPLIB_CVRP() as a template)
-* Add a command line user interface to main.py, e.g., by using argparse
+* ~~Add support for XML CVRP instances (use helpers.cvrp_rkm16_io/read_TSPLIB_CVRP() as a template)~~ : Assigned to hd-soleimani
+* Add a command line user interface to main.py, e.g., using argparse
 * Try to find the ACOTSP from the `solvers` folder before resorting to hard coded `ACOTSP_EXE_PATH` for the exe
-* Write unit tests to verify correct operation of the extractors  
+* Write unit tests to verify correct operation of the extractors
+* Extend the feature set with: 
+  * Assignment Problem LB	from Zhang, W. "Phase transitions and backbones of the asymmetric traveling salesman problem." Journal of Artificial Intelligence Research 21 (2004): 471-497.
 
 # Citing 
 
