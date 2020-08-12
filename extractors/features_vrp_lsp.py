@@ -34,16 +34,16 @@ if sys.platform == 'win32':
     vprh_solver+='.exe'
     
     
-def _get_tour_edges(tour, D):
-    """ The D is already normalized, just return the edge lenghts.
+def _get_tour_edges(tour, nD):
+    """ The nD is already normalized, just return the edge lenghts.
     """
-    return [D[tour[i]][tour[i+1]] for i in range(len(tour)-1)]
+    return [nD[tour[i]][tour[i+1]] for i in range(len(tour)-1)]
     
-def _normalize_tour_edges(tour, D):
+def _normalize_tour_edges(tour, nD):
     """ Normalize the tour edge lengths to total tour length. The tour can be 
     a route or a giant tour encoded solution.
     """
-    tour_edges = [D[tour[i]][tour[i+1]] for i in range(len(tour)-1)]
+    tour_edges = [nD[tour[i]][tour[i+1]] for i in range(len(tour)-1)]
     tour_len = float(sum(tour_edges))
     # special case that is eg. in F-n45-k4 where there is a tour with just one 
     #  node overlapping the depot
@@ -177,10 +177,14 @@ def _analyze_tour_edges(
         tour_segment_edge_counts.append(segment_edge_count)
         tour_segment_lengths.append(segment_length)
     
-def lsp_features(problem_file_name, pts, D, qs, Q, repeats=20, normalize=True,
+def lsp_features(problem_file_name, pts, nD, qs, Q, repeats=20, normalize=True,
                  return_upper_bound=False, prioritize_upper_bound_k=None):
     """ qs are the demands (with 0 being the depot with demand 0f 0)
-        Q is the capacity"""
+        Q is the capacity.
+        
+        Note that the normalized points `distance matrix `nD` is used only
+        for analysis after the LSP proper. Hence, the actual LSP is done
+        on the original problem!"""
     
     features = []
         
@@ -332,9 +336,9 @@ def lsp_features(problem_file_name, pts, D, qs, Q, repeats=20, normalize=True,
                         normalized_nodes_per_route.append(nodes_per_route/float(N))
                         route.append(0)
                         
-                        #ntour_edge_lens = _normalize_tour_edges(tour, D)
-                        # we assume that the D is already noremalized, no need to normalize again
-                        tour_edge_lens = _get_tour_edges(route, D)
+                        #ntour_edge_lens = _normalize_tour_edges(tour, nD)
+                        # we assume that the nD is already noremalized, no need to normalize again
+                        tour_edge_lens = _get_tour_edges(route, nD)
                         
                         _analyze_tour_edges( tour_edge_lens, #in
                            quantile_edges, tour_segment_edge_counts, #out
