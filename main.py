@@ -137,14 +137,14 @@ def calculate_features(vrp_file, task_falgs, flatten_feature_list=False):
         start = time.clock()
         if task_falgs & CALC_BRANCH_AND_CUT_PROBING:    
             calculated_lsp_features, upper_bound, upper_bound_k = \
-                lsp_features(vrp_file, npts, nD, demands, C, repeats=20,
+                lsp_features(vrp_file, pts, nD, demands, C, repeats=20,
                              return_upper_bound=True,
                              prioritize_upper_bound_k=None if soft_k else k)
             if soft_k and upper_bound_k is not None:
                 k = upper_bound_k
             all_features += calculated_lsp_features
         else:
-            all_features += lsp_features(vrp_file, npts, nD, demands, C, repeats=20)    
+            all_features += lsp_features(vrp_file, pts, nD, demands, C, repeats=20)    
         elapsed = time.clock()-start
         timing_features.append( ("T3", "Timing for Local Search Probing Features [Hu14]", elapsed ) )
 
