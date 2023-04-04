@@ -8,7 +8,11 @@ _for a zoomable visualization, see http://users.jyu.fi/~juherask/features/_
 
 # Usage
 
-[Configure](https://github.com/yorak/CVRPFeatureExtractors#configuring), plop your problem instances to the instances folder, and run `main.py` using Python 2.7 and with [all of the other dependencies installed](https://github.com/yorak/CVRPFeatureExtractors#dependencies).
+1. Clone the repository,
+2. install all of the [dependencies](https://github.com/yorak/CVRPFeatureExtractors#dependencies).,
+3. [configure the paths](https://github.com/yorak/CVRPFeatureExtractors#configuring),
+4. plop your CVRP instances to the instances folder,
+5. and run `main.py` using Python 2.7
 
 # Configuring
 
